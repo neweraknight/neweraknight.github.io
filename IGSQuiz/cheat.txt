@@ -1,0 +1,5 @@
+cheat:
+
+lang: 0
+chelsea: 1
+adam: 3

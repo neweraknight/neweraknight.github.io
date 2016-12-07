@@ -1,0 +1,356 @@
+<html>
+<head>
+<style>
+body {
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+header {
+	color: #ff4f0a;
+	margin-left: 15%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+#blocker {
+	background-color: #aaaaaa;
+	width: 100%;
+	height: 60px;
+	display: flex;           /* establish flex container */
+	padding-left: 15%;
+    /*justify-content: center; /* align items vertically, in this case */
+	align-items: center;
+}
+
+#smoltext {
+	font-size: 55%;
+}
+
+#blocker > div {
+ display: inline-block;
+ background-color: #aaaaaa;
+ font-size: 20px;
+ height: 60px;
+ display: flex;           /* establish flex container */
+ align-items: center;
+ padding-left: 10px;
+ width: calc(60% / 5); 
+font-weight: bold; 
+}
+
+#blocker > div:hover {
+ background-color: #ffffff;
+}
+
+div.main {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+img {
+    border-radius: 8px;
+}
+
+div.image {
+ display: inline-block;
+ padding: 5px;
+}
+
+#byline {
+	width: 60%
+	display:inline-block;
+}
+
+#inline {
+	padding-top:0px;
+	vertical-align:top;
+	display:inline-block;
+}
+#authorName {
+	font-size: 20px;
+	font-weight: bold;
+	color: #4286f4;
+}
+
+#companyRole {
+	font-size: 12px;
+}
+
+#resultName {
+	font-size: 20px;
+	font-weight: bold;
+	color: #4286f4;
+}
+
+#resultBio {
+	font-size: 12px;
+	height: 100px;
+}
+
+div.question {
+	padding-top: 20px;
+}
+
+form {
+	margin-left: 20px;
+}
+
+p.questionText {
+	font-size: 20px;
+}
+
+</style>
+</head>
+
+<body>
+<header>IronGalaxyFeed</header>
+<div id="blocker">
+<div>Programming</div>
+<div>Art</div>
+<div>QA</div>
+<div>BizDev</div>
+<div>Whatever It Is That Tom Does</div>
+</div>
+
+<div class="main">
+	<h1>Which super-duper cool Iron Galaxy Exec are you?!</h1>
+	<h4>Don't fire me, Ally made me do this.</h4>
+	<p id="smoltext">made on Dec 6, 2016, at 10:32pm as an act of extreme procrastination and lingering need to fulfil stupid promises</p>
+
+	<div class="byline">
+		<div class="image"><img src="icon.jpg" width="42" height="42"></div>
+		<div id="inline">
+			<div id="authorName">Two Beers</div>
+			<div id="companyRole">Shitty Content Creator</div>
+		</div>
+	</div>
+	
+	<div class="question">
+		<p class="questionText">How loud do you like yelling?</P>
+		<form  id="q1">
+			<input type="checkbox" value=1>Not Much</br>
+			<input type="checkbox" value=0>Very Loud</br>
+			<input type="checkbox" value=0>GFB</br>
+			<input type="checkbox" value=2>Pretty Loud</br>
+		</form>
+	</div>
+	
+	<div class="question">
+		<p class="questionText">Pick your ideal outfit.</P>
+		<form  id="q2">
+			<input type="checkbox" value=2>Business Casual</br>
+			<input type="checkbox" value=1>Lots 'o Colors</br>
+			<input type="checkbox" value=0>Gym Shorts and Graphic Tee</br>
+			<input type="checkbox" value=1>Punk Rock AF</br>
+		</form>
+	</div>
+	
+	<div class="question">
+		<p class="questionText">You arrive in a new city, what do you do?</P>
+		<form  id="q3">
+			<input type="checkbox" value=0>Tweet "_____ WHAT'S GOOD"</br>
+			<input type="checkbox" value=2>Everyone here knows you already. Await invitations.</br>
+			<input type="checkbox" value=1>Go some place cool and take pictures.</br>
+			<input type="checkbox" value=0>Turn the <i>fuck up</i>, son.</br>
+		</form>
+	</div>
+	
+	<div class="question">
+		<p class="questionText">One of your new employees engages you in a drinking contest. What do you do?</P>
+		<form  id="q4">
+			<input type="checkbox" value=2>Distract them during the contest, so they lose early, while still sober.</br>
+			<input type="checkbox" value=0><i>Bury</i> that motherfucker.</br>
+			<input type="checkbox" value=1>Decline.</br>
+			<input type="checkbox" value=2>Humour the employee for a bit, but cut it off before it gets unreasonable.</br>
+		</form>
+	</div>
+	
+	<div class="question">
+		<p class="questionText">JTL has asked you about yearly bonuses during a Company Meeting again. How do you respond?</P>
+		<form  id="q5">
+			<input type="checkbox" value=1>Say that the issue will be sorted out soon, even if it might not be.</br>
+			<input type="checkbox" value=0>Tell him top men are on it.</br>
+			<input type="checkbox" value=2>Being explaining company finances until people stop paying attention.</br>
+			<input type="checkbox" value=0>Shrug.</br>
+		</form>
+	</div>
+	
+	<div class="question">
+		<p class="questionText">A Valued Employee™ wishes to move to Orlando. How do you handle the situation?</P>
+		<form  id="q6">
+			<input type="checkbox" value=0>Add their name to a post it note on your desk labelled "Benedict Arnolds."</br>
+			<input type="checkbox" value=2>Sit them down and make sure they are making the right decision.</br>
+			<input type="checkbox" value=1>No skin off your nose.</br>
+			<input type="checkbox" value=1>Send them a compilation of Florida Man stories.</br>
+		</form>
+	</div>
+	
+	<div class="question">
+		<p class="questionText">How good do you think the Raid 2 is?</P>
+		<form  id="q7">
+			<input type="checkbox" value=2>Very good!</br>
+			<input type="checkbox" value=0>The fucking best.</br>
+			<input type="checkbox" value=1>It's pretty good.</br>
+			<input type="checkbox" value=2>You don't have the heart to tell one of your best friends you don't like it as much as they do.</br>
+		</form>
+	</div>
+	
+	<div id="results">
+	<h2>YOU GOT:</h2>
+		<div class="byline">
+			<div class="image"><img id="resultImg" src="lang.png" width="320" height="256"></div>
+			<div id="inline" style="width:50%;">
+				<div id="resultName">Dave Lang (aka D Leezy)</div>
+				<div id="resultBio">You most resemble our Glorious Founder! You can be found either drinking or tweeting. Or doing both simultaneoiusly while getting invited to cool secret parties.</div>
+			</div>
+		</div>
+		<button onclick="restartQuiz()">Restart Quiz</button>
+	</div>
+	
+<div>
+
+<script>
+
+
+function attachCheckboxHandlers() {
+	document.getElementById("results").style.visibility = "hidden";
+    // get reference to element containing toppings checkboxes
+    var forms = document.getElementsByTagName('form');
+
+	for (var j = 0, lenOuter=forms.length; j<lenOuter; ++j)
+	{
+	    // get reference to input elements in toppings container element
+		var choices = forms[j].getElementsByTagName('input');
+    
+		// assign updateTotal function to onclick property of each checkbox
+		for (var i=0, len=choices.length; i<len; ++i) {
+			if ( choices[i].type === 'checkbox' ) {
+				choices[i].onclick = onCheckboxSelected;
+			}
+		}
+	}
+}
+
+function areAllCheckboxesAnswered()
+{
+    var forms = document.getElementsByTagName('form');
+
+	for (var j = 0, lenOuter=forms.length; j<lenOuter; ++j)
+	{
+	    // get reference to input elements in toppings container element
+		var choices = forms[j].getElementsByTagName('input');
+		
+		var hasFoundChecked = false;
+		// assign updateTotal function to onclick property of each checkbox
+		for (var i=0, len=choices.length; i<len; ++i) {
+			if ( choices[i].type === 'checkbox' ) {
+				if (choices[i].checked)
+				{
+					hasFoundChecked = true;
+					break;
+				}
+			}
+		}
+		
+		if (!hasFoundChecked)
+		{
+			return false;
+		}
+	}
+	
+	return true;
+}
+
+function endQuiz()
+{
+	var countDave = 0;
+	var countAdam = 0;
+	var countChea = 0;
+	var forms = document.getElementsByTagName('form');
+
+	for (var j = 0, lenOuter=forms.length; j<lenOuter; ++j)
+	{
+	    // get reference to input elements in toppings container element
+		var choices = forms[j].getElementsByTagName('input');
+		
+		var hasFoundChecked = false;
+		// assign updateTotal function to onclick property of each checkbox
+		for (var i=0, len=choices.length; i<len; ++i) {
+			if ( choices[i].type === 'checkbox' ) 
+			{
+				if (choices[i].checked)
+				{
+					if (choices[i].value == 0)
+					{	
+						countDave++;
+					}
+					else if (choices[i].value == 1)
+					{
+						countChea++;
+					}
+					else if (choices[i].value == 2)
+					{
+						countAdam++;
+					}
+				}
+			}
+		}
+	}
+	
+	console.log("Dave: " + countDave);
+	console.log("Adam: " + countAdam);
+	console.log("Chelsea: " + countChea);
+	document.getElementById("results").style.visibility = "visible";
+	if (countDave > countAdam && countDave > countChea)
+	{
+		document.getElementById("resultName").innerHTML  = "Dave Lang (aka D Leezy)";
+		document.getElementById("resultBio").innerHTML  = "You most resemble our Glorious Founder! You can be found either drinking or tweeting. Or doing both simultaneoiusly while getting invited to cool secret parties. Your social capital is apparently Fort Knox."
+		document.getElementById("resultImg").src="lang.png";
+	}
+	else if (countAdam > countDave && countAdam > countChea)
+	{
+		document.getElementById("resultName").innerHTML  = "Adam Boyes (aka The Usurper, Eh?)";
+		document.getElementById("resultBio").innerHTML  = "Praise Be To The Usurper! You have what it takes to climb to the top, only to later jump off the top because apparently the top isn't as fulfilling as the climb. That or you just really are D Leezys biggest fan."
+		document.getElementById("resultImg").src="boyes.jpg";
+	}
+		else if (countChea > countDave && countChea > countAdam)
+	{
+		document.getElementById("resultName").innerHTML  = "Chelsea Blasko (aka Big Boss)";
+		document.getElementById("resultBio").innerHTML  = "You've got what it takes to be in the drivers seat! You may not always know what you're doing when you start, but in no time you'll be the last bastion keeping over a hundred people fed with roofs over their heads. Thank you. Thank you so much.";
+		document.getElementById("resultImg").src="chelsea.jpg";
+	}
+	window.scrollTo(0,document.body.scrollHeight);
+}
+
+function onCheckboxSelected(e) {
+    // 'this' is reference to checkbox clicked on
+    var form = this.form;
+	var checks = form.getElementsByTagName('input');
+	var length = checks.length;
+	for (var i = 0; i < length; ++i)
+	{
+		checks[i].checked = false;
+	}
+	this.checked = true;
+	
+	if (areAllCheckboxesAnswered())
+	{
+		endQuiz();
+	}
+}
+
+function restartQuiz()
+{
+	window.scrollTo(0,0);
+	location.reload();
+}
+//whee?
+attachCheckboxHandlers();
+</script>
+
+</div>
+</div>
+
+</body>
+</html>
