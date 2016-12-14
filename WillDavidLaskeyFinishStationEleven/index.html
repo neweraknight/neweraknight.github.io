@@ -16,43 +16,21 @@ body
 	left: 25%;
 	color: #c16400;
 	text-shadow: -2px 2px #111111;
-	-webkit-animation: pulse 2s; /* Chrome, Safari, Opera */
-    animation: pulse 2s;
-}
-/* Chrome, Safari, Opera */
-@-webkit-keyframes pulse {
-    0% 
-	{ 
-		transform: scale(1, 1) rotate(0deg); 
-		-webkit-transform: (1, 1) rotate(0deg); 
-	}
-    25%
-	{
-		transform: scale(1.2, 1.2) rotate(-10deg);
-		-webkit-transform: (1.2, 1.2) rotate(-10deg); 
-	}
-	50% 
-	{ 
-		transform: scale(1, 1) rotate(0deg); 
-		-webkit-transform: (1, 1) rotate(0deg); 		
-	}
+    	animation: pulse 2s;
 }
 /* Standard syntax */
 @keyframes pulse {
     0% 
 	{ 
 		transform: scale(1, 1) rotate(0deg); 
-		-webkit-transform: (1, 1) rotate(0deg); 
 	}
     25%
 	{
 		transform: scale(1.2, 1.2) rotate(-10deg);
-		-webkit-transform: (1.2, 1.2) rotate(-10deg); 
 	}
 	50% 
 	{ 
-		transform: scale(1, 1) rotate(0deg); 
-		-webkit-transform: (1, 1) rotate(0deg); 		
+		transform: scale(1, 1) rotate(0deg); 		
 	}
 }
 </style>
