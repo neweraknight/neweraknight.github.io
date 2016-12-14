@@ -1,0 +1,117 @@
+<html>
+<head>
+<style>
+body 
+{
+	background-color: #652d66;
+}
+#willhe {
+	font-size: 400%;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight: 900;
+    position: relative;
+	text-align: center;
+    top: 45%;
+	width: 50%;
+	left: 25%;
+	color: #c16400;
+	text-shadow: -2px 2px #111111;
+	-webkit-animation: pulse 2s; /* Chrome, Safari, Opera */
+    animation: pulse 2s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse {
+    0% 
+	{ 
+		transform: scale(1, 1) rotate(0deg); 
+		-webkit-transform: (1, 1) rotate(0deg); 
+	}
+    25%
+	{
+		transform: scale(1.2, 1.2) rotate(-10deg);
+		-webkit-transform: (1.2, 1.2) rotate(-10deg); 
+	}
+	50% 
+	{ 
+		transform: scale(1, 1) rotate(0deg); 
+		-webkit-transform: (1, 1) rotate(0deg); 		
+	}
+}
+/* Standard syntax */
+@keyframes pulse {
+    0% 
+	{ 
+		transform: scale(1, 1) rotate(0deg); 
+		-webkit-transform: (1, 1) rotate(0deg); 
+	}
+    25%
+	{
+		transform: scale(1.2, 1.2) rotate(-10deg);
+		-webkit-transform: (1.2, 1.2) rotate(-10deg); 
+	}
+	50% 
+	{ 
+		transform: scale(1, 1) rotate(0deg); 
+		-webkit-transform: (1, 1) rotate(0deg); 		
+	}
+}
+</style>
+</head>
+
+<body>
+	<div id="willhe">
+	</div>
+
+<script>
+function getAnAnswer()
+{
+	var index = Math.floor((Math.random()*17));
+	switch(index) 
+	{
+		case 0:
+			return "nope.";
+		case 1:
+			return "nah";
+		case 2:
+			return "try again later";
+		case 3:
+			return "unlikely";
+		case 4:
+			return "maaaaaaybe?";
+		case 5:
+			return "probs not, fam";
+		case 6:
+			return "right after he finishes Mirror's Edge";
+		case 7:
+			return "negative";
+		case 8:
+			return "neeeerp";
+		case 9:
+			return "no way, Jose";		
+		case 10:
+			return "right after he finishes Tales of Zestiria";	
+		case 11:
+			return "nuh-uh";
+		case 12:
+			return "as if";
+		case 13:
+			return "don't bet on it";
+		case 14:
+			return "signs point to no";
+		case 15:
+			return "it's technically possible";
+		case 16:
+		default:
+			return ":/";
+	}
+}
+
+function genAnswer() 
+{
+	document.getElementById("willhe").innerHTML = getAnAnswer();
+}
+//do stuff
+genAnswer();
+</script>
+</body>
+</html>
