@@ -1,3 +1,11 @@
+<!--
+Hello! I see you've opened up the developer tools. This is Kevin, and this is the content of my site! As I mentioned on the site I'm a bit 
+of a tinkerer, so whereas I have friends who could do a much (MUCH) better job of getting a slick site up and running for me I've opted to 
+prod and poke at making one of my own. I typically dislike web development so if you're a webdev I want to apologize in advance before you
+see the rest of how this was composed.
+
+This is very much a work in progress, I mess with it as I have time! If I'm doing anything obviously dumb, please let me know! (nicely, if possible)
+-->
 <html>
 <head>
 <style>
@@ -15,24 +23,48 @@ body
 {
 	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
 	background-color: #373c44;
+	background-image: 
+		linear-gradient( to top, rgba(55, 60, 68, 255), rgba(55, 60, 68, 0) 20%, rgba(55, 60, 68, 0) 60%, rgba(55, 60, 68, 255)),
+		url("img/skullsite.png");
+    background-repeat: no-repeat, repeat;
+	background-size: 100% 100%, 100px 100px;
+	background-position: center, center;
+	background-clip: content-box;
 	color: #e6e9ef;
+	-webkit-animation: backgroundScroll 2s linear infinite;
+	animation: backgroundScroll 2s linear infinite;
 }
+
+@-webkit-keyframes backgroundScroll {
+	from {background-position: 0 0, 0 0;}
+	to {background-position: 0px 0, 0px 100px;}
+}
+        
+@keyframes backgroundScroll {
+	from {background-position: 0 0, 0 0;}
+	to {background-position: 0 0, 0px 100px;}
+}
+
 
 header
 {
-	padding-left: 25%;
-	padding-top: 6%;
-	padding-right: 25%;
+	padding-left: 5%;
+	padding-top: 1%;
+	padding-right: 5%;
 	text-align: center;
 	text-shadow: -2px 2px #242526;
-	font-size-adjust: inherit;
+	font-size-adjust: inherit; 
+	font-size: 300%;
+	font-weight: 450;
 }
 
-@media (min-width:320px) 
+@media (min-width:320px)
 {
 	header
 	{
-		font-size: 200%;
+		font-size: 360%;
+		padding-left: 0%;
+		padding-right: 0%;
 	}
 }
 
@@ -93,6 +125,8 @@ a
 	{
 		width: 40%;
 		height: 20%;
+		min-width: 90px;
+		min-height: 90px;
 	}
 }
 
@@ -102,7 +136,19 @@ a
 	{
 		width: 25%;
 		height: 25%;
+		min-width: 100px;
+		min-height: 100px;
+		max-width: 250px;
+		max-height: 250px;
 	}
+}
+
+.headerimg
+{
+	padding-top: 1%;
+	display: inline-block;
+	height: 10%;
+	width: auto;
 }
 
 .entry:hover
@@ -113,13 +159,47 @@ a
 	background-color: #7e8791;
 }
 
+.banner
+{
+	margin-left: 2%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-right: 2%;
+	width: 96%;
+	text-align: center;
+}
+
 .description
 {
 	position: relative;
 	top: 40%;
 	width: 100%;
 	text-align: center;
-	font-size: 120%;
+	font-weight: 700;
+}
+
+@media (min-width:320px) 
+{
+	.description
+	{
+		font-size: 100%;
+	}
+}
+
+@media (min-width:480px) 
+{
+	.description
+	{
+		font-size: 110%;
+	}
+}
+
+@media (min-width:800px) 
+{
+	.description
+	{
+		font-size: 160%;
+	}
 }
 
 
@@ -127,28 +207,14 @@ a
 </head>
 
 <body>
-
+<meta name="viewport" content="width=device-width">
+<!--
+<div class = "banner">
+<img src="img/croppedskull.png" class="headerimg"/>
+</div>
+-->
 <header>kevin.knight</header>
 <div id="bio">programmer. tinkerer. doodler. games noodler. skull enthusiast.</div>
-
-	<div class="row">
-
-		<a href="https://kevin-t-knight.itch.io/">
-			<div class = "entry">
-				<div class = "description">
-					itch.io
-				</div>
-			</div>
-		</a>
-		
-		<a href="https://cartrdge.com/fiveoutofkevin">
-			<div class = "entry">
-					<div class = "description">
-							cartrdge
-					</div>
-			</div>
-		</a>
-	</div>
 
 	<div class="row">
 		<a href="https://twitter.com/fiveoutofkevin">
@@ -167,6 +233,25 @@ a
 			</div>
 		</a>
 
+	</div>
+	
+	<div class="row">
+
+		<a href="https://kevin-t-knight.itch.io/">
+			<div class = "entry">
+				<div class = "description">
+					itch.io
+				</div>
+			</div>
+		</a>
+		
+		<a href="https://cartrdge.com/fiveoutofkevin">
+			<div class = "entry">
+					<div class = "description">
+							cartrdge
+					</div>
+			</div>
+		</a>
 	</div>
 
 </body>
