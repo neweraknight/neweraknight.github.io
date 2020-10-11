@@ -35,6 +35,7 @@ body
 	color: #e6e9ef;
 	-webkit-animation: backgroundScroll 2s linear infinite;
 	animation: backgroundScroll 2s linear infinite;
+	background-attachment: fixed;
 }
 
 @-webkit-keyframes backgroundScroll {
@@ -92,7 +93,7 @@ header
 #bio
 {
 	background-color: #393e47;
-	font-size: 60%;
+	font-size: 90%;
 	padding-left: 25%;
 	padding-top: 0%;
 	padding-right: 25%;
@@ -128,13 +129,12 @@ header
 	margin-left: 20%;
 	margin-right: 20%;
 	padding-top: 0%;
-	padding-bottom: 0%;
-	margin-top: 0%;
-	margin-bottom: 0%;
+	padding-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 00%;
 	border-top: 0px;
 	border-bottom: 0px;
 	width: 60%;
-	height: 100%;
 	background-color: #31373b;
 	box-shadow: -4px 4px #242526;
 }
@@ -150,10 +150,10 @@ a
 
 .entry
 {
+	background-color: #393e47;
 	display: inline-block;
 	position: relative;
 	margin-left: 2px;
-	height: 30%;
 	margin-right: 2px;
 	margin-top: 2px;
 	margin-bottom: 2px;
@@ -164,9 +164,21 @@ a
 {
 	.entry
 	{
-		height: 20%;
 		min-width: 40px;
 		min-height: 20px;
+		width: 80%;
+	}
+	
+	#bg
+	{
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	
+	body 
+	{
+		background-size: 100% 100%, 50px 50px;
 	}
 }
 
@@ -174,12 +186,23 @@ a
 {
 	.entry
 	{
-		width: 23%;
-		height: 30%;
+		width: 40%;
 		min-width: 40px;
 		min-height: 20px;
 		max-width: 250px;
 		max-height: 250px;
+	}
+
+	#bg
+	{
+		width: 60%;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	
+	body 
+	{
+		background-size: 100% 100%, 100px 100px;
 	}
 }
 
@@ -203,7 +226,6 @@ a
 .description
 {
 	position: relative;
-	top: 40%;
 	width: 100%;
 	text-align: center;
 	font-weight: 700;
@@ -225,11 +247,11 @@ a
 {
 	.description
 	{
-		font-size: 100%;
+		font-size: 180%;
 	}
 	.subtext
 	{
-		font-size: 50%;
+		font-size: 90%;
 	}
 }
 
@@ -237,11 +259,11 @@ a
 {
 	.description
 	{
-		font-size: 110%;
+		font-size: 200%;
 	}
 	.subtext
 	{
-		font-size: 60%;
+		font-size: 100%;
 	}
 }
 
@@ -249,17 +271,17 @@ a
 {
 	.description
 	{
-		font-size: 160%;
+		font-size: 220%;
 	}
 	.subtext
 	{
-		font-size: 80%;
+		font-size: 90%;
 	}
 }
 
 #madein
 {
-	position: absolute;
+	position: fixed;
 	bottom: 10px;
 	text-align: center;
 	font-size: 60%;
@@ -277,7 +299,7 @@ a
 <meta name="og:title" content="Kevin Knight">
 <meta name="og:url" content="https://neweraknight.github.io/" />
 <meta name="og:image" content="https://neweraknight.github.io/img/skullsiteicon.png" />
-<meta name="og:description" content="I make games and dumb comics. Pls look at them and validate my existence."/>
+<meta name="og:description" content="I make games and doodle comics. Pls look at them and validate my existence."/>
 <meta name="og:site_name" content="Kevin Knight" />
 <meta name="og:type" content="website" />
 
@@ -286,16 +308,16 @@ a
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@FiveOutOfKevin" />
 <meta name="twitter:title" content="A collection of all things Kevin" />
-<meta name="twitter:description" content="I make games and dumb comics. Pls look at them and validate my existence." />
+<meta name="twitter:description" content="I make games and doodle comics. Pls look at them and validate my existence." />
 <meta name="twitter:image" content="https://neweraknight.github.io/img/skullsiteicon.png" />
 <meta name="twitter:image:alt" content="A sickass skull" />
 
-<meta name="description" content="I make games and dumb comics. Pls look at them and validate my existence." />
+<meta name="description" content="I make games and doodle comics. Pls look at them and validate my existence." />
 <meta name="image" content="https://neweraknight.github.io/img/skullsiteicon.png"/>
 
 <!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="Kevin Knight"/>
-<meta itemprop="description" content="I make games and dumb comics. Pls look at them and validate my existence."/>
+<meta itemprop="description" content="I make games and doodle comics. Pls look at them and validate my existence."/>
 <meta itemprop="image" content="https://neweraknight.github.io/img/skullsiteicon.png"/>
 
 </head>
@@ -313,13 +335,14 @@ a
 <header>kevin knight</header>
 <div id="bio">programmer. tinkerer. doodler. games noodler. skull enthusiast. here's the stuff I do:</div>
 
-<div class="row">
+	<div class="row">
+			<iframe src="https://itch.io/embed/658275?linkback=true&amp;border_width=0&amp;dark=true" width="208" height="167" frameborder="0"><a href="https://kevin-t-knight.itch.io/toot-tanks">T.O.O.T. Tanks by Kevin Knight</a></iframe>
+	</div>
 
-		<iframe src="https://itch.io/embed/221589?linkback=true&amp;border_width=0&amp;dark=true" width="208" height="167" frameborder="0"><a href="https://pizzacursestudios.itch.io/real-winners-victoryball">Real Winners: Victoryball by Pizza Curse, jholland, Kevin Knight</a></iframe>
+	<div class="row">
+			<iframe src="https://itch.io/embed/221589?linkback=true&amp;border_width=0&amp;dark=true" width="208" height="167" frameborder="0"><a href="https://pizzacursestudios.itch.io/real-winners-victoryball">Real Winners: Victoryball by Pizza Curse, jholland, Kevin Knight</a></iframe>
+	</div>
 
-		<iframe src="https://itch.io/embed/658275?linkback=true&amp;border_width=0&amp;dark=true" width="208" height="167" frameborder="0"><a href="https://kevin-t-knight.itch.io/toot-tanks">T.O.O.T. Tanks by Kevin Knight</a></iframe>
-
-</div>
 	<div class="row">
 		<a href="https://twitter.com/fiveoutofkevin">
 			<div class = "entry">
@@ -328,7 +351,8 @@ a
 					</div>
 			</div>
 		</a>
-
+	</div>
+	<div class="row">
 		<a href="https://www.instagram.com/FiveOutOfKevin/">
 			<div class = "entry">
 				<div class = "description">
@@ -336,7 +360,8 @@ a
 				</div>
 			</div>
 		</a>
-		
+	</div>
+	<div class="row">
 		<a href="https://kevin-t-knight.itch.io/">
 			<div class = "entry">
 				<div class = "description">
@@ -347,17 +372,7 @@ a
 
 	</div>
 	
-		
 	<div class="row">
-	
-			<a href="https://www.youtube.com/channel/UCyXHOniCJVatTAIqe6Pis5g/videos">
-			<div class = "entry">
-					<div class = "description">
-							youtube
-					</div>
-			</div>
-		</a>
-
 		<a href="https://www.youtube.com/watch?v=_8igQgRWx0o">
 			<div class = "entry">
 				<div class = "description">
@@ -370,6 +385,18 @@ a
 		</a>
 		
 	</div>
+		
+	<div class="row">
+	
+			<a href="https://www.youtube.com/channel/UCyXHOniCJVatTAIqe6Pis5g/videos">
+			<div class = "entry">
+					<div class = "description">
+							youtube
+					</div>
+			</div>
+		</a>
+	</div>
+
 	
 	<!--
 	<div class="botRow">
