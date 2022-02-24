@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>Will David Finish Station Eleven?</title>
+<style>
+body 
+{
+	background-color: #652d66;
+}
+    #prompt {
+        font-size: 200%;
+        font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        position: relative;
+        text-align: center;
+        background-color: #FFFFFF;
+    }
+
+#theName {
+	font-size: 400%;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-weight: 900;
+    position: relative;
+	text-align: center;
+    top: 45%;
+	width: 50%;
+	left: 25%;
+	color: #c16400;
+	text-shadow: -2px 2px #111111;
+	-webkit-animation: pulse 2s; /* Chrome, Safari, Opera */
+    animation: pulse 2s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes pulse {
+    0% 
+	{ 
+		transform: scale(1, 1) rotate(0deg); 
+		-webkit-transform: (1, 1) rotate(0deg); 
+	}
+    25%
+	{
+		transform: scale(1.2, 1.2) rotate(-10deg);
+		-webkit-transform: (1.2, 1.2) rotate(-10deg); 
+	}
+	50% 
+	{ 
+		transform: scale(1, 1) rotate(0deg); 
+		-webkit-transform: (1, 1) rotate(0deg); 		
+	}
+}
+/* Standard syntax */
+@keyframes pulse {
+    0% 
+	{ 
+		transform: scale(1, 1) rotate(0deg); 
+		-webkit-transform: (1, 1) rotate(0deg); 
+	}
+    25%
+	{
+		transform: scale(1.2, 1.2) rotate(-10deg);
+		-webkit-transform: (1.2, 1.2) rotate(-10deg); 
+	}
+	50% 
+	{ 
+		transform: scale(1, 1) rotate(0deg); 
+		-webkit-transform: (1, 1) rotate(0deg); 		
+	}
+}
+</style>
+</head>
+
+<body>
+	<div id="prompt">
+		who takes Juliet's shot today?
+	</div>
+	<div id="theName">
+	</div>
+
+<script>
+
+function getDaysSince()
+{
+
+    var dateNow = new Date();
+
+    //don't need this stuff
+    //dateNow.setHours(0);
+    //dateNow.setSeconds(0);
+    //dateNow.setMinutes(0);
+
+    var targetDate = new Date(2022, 1, 16, 0, 0, 0, 0);
+    //Becky, Emily, Gerardo, Kevin, Melissa, Tim - 6 total
+
+	var delta = dateNow - targetDate;
+	console.log("Delta in days between" + dateNow + " and " + targetDate + " is " + delta / (1000 * 3600 * 24));
+	return delta / (1000 * 3600 * 24);
+
+}
+
+function getAnAnswer(daysSince)
+{
+	const names = ["Becky", "Emily", "Gerardo", "Kevin", "Melissa", "Tim"];
+    console.log("Name index is " + Math.floor(daysSince) % names.length);
+    return names[Math.floor(daysSince) % names.length];
+}
+
+function genAnswer(daysSince) 
+{
+    document.getElementById("theName").innerHTML = getAnAnswer(daysSince);
+}
+
+function keepPageFresh(daysSince)
+{
+	const bgPhotoCount = 9;
+    const colors = ["#71ab20", "#652d66", "#eb5e34", "#30bce3", "#2b5ce3", "#bf1151", "#6c0a80", "#00c79f", "#91372c", "#6b48db"];
+	
+	document.body.style.backgroundImage = "url('shots" + Math.floor(daysSince) % bgPhotoCount + ".png')";
+	document.body.style.backgroundRepeat = "no-repeat";
+	document.body.style.backgroundPosition = "top"
+	console.log("BG photo index is " + Math.floor(daysSince) % bgPhotoCount);
+	document.body.style.backgroundColor = colors[Math.floor(daysSince) % colors.length];
+    console.log("Color index is " + Math.floor(daysSince) % colors.length);
+}
+
+//do stuff
+var days = getDaysSince();
+keepPageFresh(days);
+genAnswer(days);
+</script>
+</body>
+</html>
